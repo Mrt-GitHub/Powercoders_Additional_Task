@@ -1,0 +1,15 @@
+version: "3.7"
+
+services:
+  myapp:
+    image: bernmurat/convert:latest
+    container_name: myapp
+    restart: always
+    ports:
+      - "80:80"
+    networks:
+      - mynet
+
+networks:
+  mynet:
+    driver: bridge
